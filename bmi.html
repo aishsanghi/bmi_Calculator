@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BMI</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 100vh;
+        width: 100%;
+        /* background-color: aquamarine; */
+        background-image: url(medi.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-content: center;
+      }
+      .subbox {
+        height: 221px;
+        width: 389px;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* align-content: center; */
+        /* text-align: center; */
+        margin: auto;
+        padding: 10px;
+      }
+      .subbox_height {
+        background-position-y: center;
+        margin: 10px;
+        height: 21px;
+      }
+      .subbox_weight {
+        background-position-y: center;
+        margin: 10px;
+        height: 21px;
+      }
+      .button {
+        height: 25px;
+        width: 115px;
+        color: green;
+        background-color: yellow;
+        font-weight: 800;
+        margin: 19px;
+      }
+      .box {
+        display: flex;
+        margin: 0px;
+        /* border-radius: 10px;
+        text-align: center;
+        background-color: yellow;
+        font-weight: bold;
+        padding: 12px; */
+      }
+      .subbox_box1 {
+        height: 26px;
+        width: 80px;
+        background-color: rgb(0, 81, 255);
+      }
+      .subbox_box2 {
+        height: 26px;
+        width: 80px;
+        background-color: green;
+      }
+      .subbox_box3 {
+        height: 26px;
+        width: 80px;
+        background-color: yellow;
+      }
+      .subbox_box4 {
+        height: 26px;
+        width: 80px;
+        background-color: orange;
+      }
+      .subbox_box5 {
+        height: 26px;
+        width: 80px;
+        background-color: red;
+      }
+      .result_box {
+        border-radius: 10px;
+        text-align: center;
+        background-color: rgb(239, 239, 235);
+        font-weight: bold;
+        padding: 6px;
+        margin: 2px;
+        height: 30px;
+      }
+      .arrow {
+        position: relative;
+        left: 185px;
+        right: 0px;
+        height: 20px;
+        width: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="subbox">
+        <input
+          class="subbox_height"
+          type="number"
+          id="height_box"
+          required
+          placeholder="Enter ur height in cms"
+        />
+        <input
+          class="subbox_weight"
+          type="number"
+          id="weight_box"
+          required
+          placeholder="Enter ur weight in kgs"
+        />
+        <input
+          class="button"
+          type="submit"
+          onclick="check()"
+          value="Check BMI"
+        />
+        <div class="box">
+          <div class="subbox_box1"></div>
+          <div class="subbox_box2"></div>
+          <div class="subbox_box3"></div>
+          <div class="subbox_box4"></div>
+          <div class="subbox_box5"></div>
+        </div>
+        <img class="arrow" id="arrow_" src="arrow.png" alt="arrow" />
+        <div class="result_box">
+          <p
+            id="result"
+            style="border-radius: 1px; height: 25px; align-content: center"
+            ;
+          ></p>
+        </div>
+      </div>
+    </div>
+    <script src="bmi.js"></script>
+  </body>
+</html>
